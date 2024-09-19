@@ -126,13 +126,30 @@ let version=document.querySelector(".ver");
 let verbtn=document.querySelector(".verbtn");
 let verclick=false;
 
+let intropara=document.querySelector(".intro-para");
+
 verbtn.addEventListener("click",()=>{
      if(version.classList.contains("verhide")){
         version.classList.remove("verhide");
         verbtn.style.color='white';
+
+        intropara.classList.add('verhide');  //these are for to make responsive while fixing bugs.
+        version.style.marginLeft='8vmin';
+        version.style.height='55vmin';
+        version.style.width='45vmin';
+        version.style.marginTop='-10vmin';
+        verbtn.style.marginTop='5vmin';
+        introbtn.classList.add("verhide");
      }else{
         version.classList.add("verhide");
         verbtn.style.color='black';
+        
+        intropara.classList.remove('verhide');  //these are for to make responsive while fixing bugs.
+        version.style.marginLeft='100vmin';
+        version.style.height='35vmin';
+        version.style.width='34vmin';
+        version.style.marginTop='-52vmin';
+        introbtn.classList.remove("verhide");
      }
     verclick=true;
 })
