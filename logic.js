@@ -113,11 +113,17 @@ let resetfunc =()=>{
 resetbtn.addEventListener("click", resetfunc);
 newbtn.addEventListener("click", resetfunc);
 
+let content=document.querySelector(".container");
+
+let newgame=document.querySelector(".newgame-btn");
+
 let introbtn=document.querySelector(".intro-btn");
 let introdiv=document.querySelector(".intro");
 
 introbtn.addEventListener("click",()=>{
     introdiv.style.display='none';
+    content.classList.remove("verhide"); //as we start the game our game appears.
+    newgame.classList.remove("verhide"); //as we start the game our new game button appears.
 })
 
 //Version Info Functionality..
@@ -127,6 +133,7 @@ let verbtn=document.querySelector(".verbtn");
 let verclick=false;
 
 let intropara=document.querySelector(".intro-para");
+
 
 verbtn.addEventListener("click",()=>{
      if(version.classList.contains("verhide")){
